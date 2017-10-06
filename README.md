@@ -5,31 +5,42 @@
 
 ## Dataset Load:
 Common utility for loading the datasets for all questions. This utility transforms the continuous target variables for the Boston dataset IF required.
-Try using: python load\_data boston.csv
+
+Try using: `python load_data boston.csv`
 
 ## LDA
-  i)  Use: python LDA1dProjection.py filename num\_crossval
-        Eg: python LDA1dProjection boston.csv 10
-      This function will plot and save the histogram in LDA1dProjection.png.
+Usage: `python LDA1dProjection.py <filename> <num_crossval>`
+
+Eg: `python LDA1dProjection boston.csv 10`
+
+This function will plot and save the histograms in _LDA1dProjection_training.png_ and _LDA1dProjection_testing.png_.
 
 ### 2-d LDA with Gaussian generative modeling
-iii)  Use: python LDA2dGaussGM.py filename num\_crossval
-        Eg: python LDA2dGaussGM digits.csv 10
-      This function will plot and save the 2-d projections of the digits dataset in LDA2dProjectionDigits.png.
-  
+Usage: `python LDA2dGaussGM.py <filename> <num_crossval>`
 
+Eg: `python LDA2dGaussGM digits.csv 10`
+
+This function will plot and save the 2-d projections of the digits dataset in _LDA2dProjectionDigits.png_.
+  
 ## Question. 4
-To run the Gaussian Naive Bayes classifier, use the function:
-  python naive\_bayes\_gaussian.py filename num\_splits comma\_separated\_list\_of\_percentages
-  Eg: python naive\_bayes\_gaussian.py boston.csv 10 10,25,50,75,100
+To run the Gaussian Naive Bayes classifier, use the command:
 
-Similarly, to run the Logistic Regression classifier, use the function:
-  python logistic\_regression.py filename num\_splits comma\_separated\_list\_of\_percentages
-  Eg: python logistic\_regression.py boston.csv 10 10,25,50,75,100
+`python naive_bayes_gaussian.py <filename> <num_splits> <comma_separated_list_of_percentages>`
 
-To get plots comparing the two methods against a dataset, use the function:
-  python plot\_performance.py filename num\_splits comma\_separated\_list\_of\_percentages
-  Eg: python plot\_performance.py boston.csv 10 10,25,50,75,100
-This function will plot and save the error bar in logistic\_vs\_gnb\_{dataset}.png. For eg, for the Boston dataset, this stores it in logistic\_vs\_gnb\_boston.png.
+Eg: `python naive_bayes_gaussian.py boston.csv 10 10,25,50,75,100`
+
+Similarly, to run the Logistic Regression classifier, use the command:
+
+`python logistic_regression.py <filename> <num_splits> <comma_separated_list_of_percentages>`
+
+Eg: `python logistic_regression.py boston.csv 10 10,25,50,75,100`
+
+To get plots comparing the two methods against a dataset, use the command:
+
+`python plot_performance.py <filename> <num_splits> <comma_separated_list_of_percentages>`
+
+Eg: `python plot_performance.py boston.csv 10 10,25,50,75,100`
+
+This function will plot and save the error bar in _logistic\_vs\_gnb\_{dataset}.png_. For eg, for the Boston dataset, this stores it in _logistic\_vs\_gnb\_boston.png_.
   
-_NOTE_: Running plot\_performance on the Digits dataset (python plot\_performance.py digits.csv) takes 30 minutes on my i5-6200U @ 2.30 GHZ machine. Testing this using a smaller number of num\_splits might be more appropriate for grading.
+__NOTE__: Running plot\_performance on the Digits dataset (`python plot_performance.py digits.csv`) takes 30 minutes on my i5-6200U @ 2.30 GHZ machine. Testing this using a smaller number of num\_splits might be more appropriate for grading.
