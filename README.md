@@ -22,19 +22,21 @@ Eg: `python LDA2dGaussGM digits.csv 10`
 
 This function will plot and save the 2-d projections of the digits dataset in _LDA2dProjectionDigits.png_.
   
-## Question. 4
+## Naive-Bayes Gaussian Classifier
 To run the Gaussian Naive Bayes classifier, use the command:
 
 `python naive_bayes_gaussian.py <filename> <num_splits> <comma_separated_list_of_percentages>`
 
 Eg: `python naive_bayes_gaussian.py boston.csv 10 10,25,50,75,100`
 
-Similarly, to run the Logistic Regression classifier, use the command:
+## Logistic Regression Classifier
+To run the Logistic Regression classifier, use the command:
 
 `python logistic_regression.py <filename> <num_splits> <comma_separated_list_of_percentages>`
 
 Eg: `python logistic_regression.py boston.csv 10 10,25,50,75,100`
 
+## Performance Comparison
 To get plots comparing the two methods against a dataset, use the command:
 
 `python plot_performance.py <filename> <num_splits> <comma_separated_list_of_percentages>`
